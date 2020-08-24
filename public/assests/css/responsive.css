@@ -1,0 +1,5 @@
+@media (min-width: 1440px){
+	header .header-top{padding-left: 60px;padding-right: 60px;}
+	section.dashboard-main .container-fluid {padding: 0 70px;}
+	section.dashboard-main .card{min-height: 504px;}
+}

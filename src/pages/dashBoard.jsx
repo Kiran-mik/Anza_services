@@ -14,13 +14,17 @@ const DashBoard = ({commonAPI,count_search,...props}) => {
 
   useEffect(() => {
     let value_of_search=props.val_of_count
-    console.log("val_of_count",props.val_of_count);
     if(value_of_search&&value_of_search.count_&&value_of_search.count_.no_of_attempts){
       setCount(value_of_search.count_.no_of_attempts)
     }
-    getGIFlist();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.val_of_count]);
+
+  useEffect(() => {
+    getGIFlist();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
 
   //fetch GIF list during rendering
   const getGIFlist=async(val)=>{
